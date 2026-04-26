@@ -23,10 +23,10 @@ npm install f1-box-box
 ## Quick start
 
 ```ts
-import f1Pitstop from 'f1-box-box';
+import f1BoxBox from 'f1-box-box';
 
 const el = document.getElementById('loader')!;
-const pit = f1Pitstop(el, {
+const pit = f1BoxBox(el, {
   scale: 1.2,
   color: '#e22828',
   baseColor: '#1a1a1a',
@@ -48,7 +48,7 @@ pit.start();
 
 ## API
 
-### `f1Pitstop(container, options?)`
+### `f1BoxBox(container, options?)`
 
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|

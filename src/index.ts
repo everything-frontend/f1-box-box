@@ -4,7 +4,7 @@
  * then on complete() light goes green, crew steps back, car drives off.
  */
 
-export interface F1PitstopOptions {
+export interface F1BoxBoxOptions {
   /** Visual scale multiplier. Default: 1 */
   scale?: number;
   /** Accent (team) color */
@@ -21,7 +21,7 @@ export interface F1PitstopOptions {
   textInterval?: number;
 }
 
-export interface F1PitstopController {
+export interface F1BoxBoxController {
   /** Car enters pit, crew starts working. */
   start: () => void;
   /** Light goes green, crew steps back, car drives off. */
@@ -457,13 +457,13 @@ function drawPitLabel(ctx: CanvasRenderingContext2D): void {
 }
 
 /**
- * Mounts an F1 pit-stop animation. Call start() for car entry + tyre work loop,
+ * Mounts an F1 box box animation. Call start() for car entry + tyre work loop,
  * complete() for green light + car exit.
  */
-export function f1Pitstop(
+export function f1BoxBox(
   container: HTMLElement,
-  options: F1PitstopOptions = {}
-): F1PitstopController {
+  options: F1BoxBoxOptions = {}
+): F1BoxBoxController {
   if (typeof document === "undefined") {
     return {
       start: () => {},
@@ -716,4 +716,4 @@ export function f1Pitstop(
   return { start, complete, reset, setScale, destroy };
 }
 
-export default f1Pitstop;
+export default f1BoxBox;
